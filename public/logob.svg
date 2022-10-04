@@ -1,0 +1,11 @@
+<svg width="80" height="40" xmlns="http://www.w3.org/2000/svg">
+
+ <g>
+  <title>Layer 1</title>
+  <g stroke="null" id="svg_4">
+   <ellipse stroke="#0000ff" transform="matrix(0.0989789 -0.000327698 0.000339849 0.0954398 1.21926 135.388)" stroke-width="5" ry="196.59193" rx="395.81529" id="svg_1" cy="-1206.05023" cx="394.01334" fill="#ffffff"/>
+   <text stroke="#000" transform="matrix(0.536639 0 0 0.66781 -166.348 -32.5342)" font-style="italic" font-weight="bold" xml:space="preserve" text-anchor="start" font-family="Noto Sans JP" font-size="24" id="svg_2" y="74.33905" x="340.20257" fill="#ff0000">D&amp;DVV</text>
+   <path stroke="#000" id="svg_3" d="m8.02495,29.82431l31.62395,-8.7328l31.62395,8.7328l-31.62395,8.7328l-31.62395,-8.7328z" stroke-width="0" fill="#5fbf00"/>
+  </g>
+ </g>
+</svg>

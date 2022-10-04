@@ -5,6 +5,9 @@ import Heading from "../components/Heading";
 
 const Home = () => (
     <div className={styles.wrapper}>
+        <Head>
+            <title>Home</title>
+        </Head>
         <Heading text='Hello!!'/>
     </div>
 )
