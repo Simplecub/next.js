@@ -4,7 +4,12 @@ import Heading from "../../components/Heading";
 
 export const getStaticProps = async () => {
     const response = await fetch('https://jsonplaceholder.typicode.com/users')
-    const data = await response.json()
+    const data =  await response.json()
+    if (!data) {                    //если нет данных то возвращает объект и next.js перекидывает на 404 ошибку
+        return {
+            notFound: true
+        }
+    }
     return {
         props: {contacts: data}
     }
