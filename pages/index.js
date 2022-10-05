@@ -1,14 +1,35 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from '../styles/Home.module.scss'
 import Heading from "../components/Heading";
+import Socials from "../components/Socials";
 
-const Home = () => (
+export const getStaticProps = async () => {
+    try {
+        const response = await fetch('http://localhost:8088/api/socials/')
+        const data = await response.json()
+console.log(data)
+        if (!data) {                    //если нет данных то возвращает объект и next.js перекидывает на 404 ошибку
+            return {
+                notFound: true
+            }
+        }
+        return {
+            props: {socials: data}
+        }
+    } catch {
+        return {
+            props: {socials: null}
+        }
+    }
+}
+
+const Home = ({socials}) => (
     <div className={styles.wrapper}>
         <Head>
             <title>Home</title>
         </Head>
-        <Heading text='Hello!!'/>
+        <Heading text="Hello!! "/>
+        <Socials socials={socials}/>
     </div>
 )
 
