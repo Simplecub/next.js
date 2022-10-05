@@ -28,7 +28,7 @@ const Home = ({socials}) => (
         <Head>
             <title>Home</title>
         </Head>
-        <Heading text="Hello!! "/>
+        <Heading text="Hello!! " tag="h1"/>
         <Socials socials={socials}/>
     </div>
 )
