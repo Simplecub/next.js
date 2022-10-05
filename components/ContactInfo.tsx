@@ -1,6 +1,12 @@
+import {FC} from "react";   //Functional Component
 import Heading from "./Heading";
+import {contactType} from "../types";
+// создаем тип для props компонента
+type contactInfoProps = {
+    contact: contactType
+}
 
-const ContactInfo = ({contact}) => {
+const ContactInfo:FC<contactInfoProps> = ({contact} ) => {
     const {name, email, address} = contact || {}
     const {street, suite, city, zipcode} = address || {}
      if (!contact) {
