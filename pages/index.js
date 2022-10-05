@@ -5,7 +5,7 @@ import Socials from "../components/Socials";
 
 export const getStaticProps = async () => {
     try {
-        const response = await fetch('http://localhost:8088/api/socials/')
+        const response = await fetch(`${process.env.API_HOST}/socials/`)
         const data = await response.json()
 console.log(data)
         if (!data) {                    //если нет данных то возвращает объект и next.js перекидывает на 404 ошибку
