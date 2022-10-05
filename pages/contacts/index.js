@@ -1,10 +1,11 @@
 import Head from "next/head";
-import {useState, useEffect} from "react";
 import Heading from "../../components/Heading";
+import Link from "next/link";
 
 export const getStaticProps = async () => {
     const response = await fetch('https://jsonplaceholder.typicode.com/users')
-    const data =  await response.json()
+    const data = await response.json()
+
     if (!data) {                    //если нет данных то возвращает объект и next.js перекидывает на 404 ошибку
         return {
             notFound: true
@@ -16,7 +17,6 @@ export const getStaticProps = async () => {
 }
 
 const Contacts = ({contacts}) => {
-
     return (
         <>
             <Head>
@@ -25,7 +25,9 @@ const Contacts = ({contacts}) => {
             <Heading text="Contacts list:!"/>
             <ul>
                 {contacts && contacts.map(({id, name, email}) => (
-                    <li key={id}><strong>{name}</strong> ({email})</li>
+                    <li key={id}>
+                        <Link href={`/contacts/${id}`}>{name}</Link>
+                    </li>
                 ))}
             </ul>
         </>
