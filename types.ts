@@ -26,6 +26,6 @@ export type socialsType = {
 }
 
 export type headingType = {
-    tag: string,
+    tag?: string,
     text: string,
 }
